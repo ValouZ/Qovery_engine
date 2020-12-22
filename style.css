@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "SF UI Text", sans-serif;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "HK Grotesk";
+}
+
+header {
+    position: absolute;
+    display: flex;
+    width: 158px;
+    height: 49px;
+    top: 30px;
+    /* left: calc(50% - calc(158px / 2)); */
+    left: 20px;
+    align-items: center;
+    color: #A8A8C1;
+    font-size: 31px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+header p {
+    font-family: "HK Grotesk";
+}
+
+.qovery-engine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #151B2B;
+    color: white;
+    padding: 110px 10px 30px 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.head h1 {
+    font-weight: bold;
+    font-size: 36px;
+    margin-right: 1%;
+}
+
+.star-button {
+    border: 1px solid #D1D2D3;
+    border-radius: 2px;
+    background: #F8FAFB;
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-transform: capitalize;
+    height: 28px;
+    width: 95px;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.star {
+    display: flex;
+    width: 61px;
+    justify-content: center;
+    align-items: center;
+}
+
+.star img {
+    padding-right: 2px;
+}
+
+.git-likes {
+    border-left: 1px solid #D1D2D3;
+    background: #FFFFFF;
+    height: 26px;
+    width: 32px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-text h2 {
+    font-weight: 400;
+    font-size: 21px;
+    margin-bottom: 24px;
+}
+
+.content-text p {
+    color: #8686B2;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.links {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: 0.05s linear;
+    font-size: 12px;
+}
+
+.links a:hover {
+    opacity: 0.8;
+}
+
+.github {
+    background: #454658;
+    margin-right: 24px;
+}
+
+.discord {
+    background: #6578C0;
+}
+
+.links a img {
+    margin-right: 5px;
+}
+
+.illustration {
+    margin-top: 25px;
+    max-width: 360px;
+}
+
+.illustration img {
+    width: 100%;
+    height: 100%;
+}
+
+.how-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px 30px 10px;
+    background: #F9F9FD;
+}
+
+.how-text {
+    color: #454658;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-text h2 {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+.how-text p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.askOlga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #3C5D97;
+    color: white;
+    min-height: 80vh;
+    padding: 50px 10px 0 10px;
+}
+
+.askOlga h2 {
+    margin-bottom: 40px;
+    font-size: 26px;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.buttons button {
+    outline: none;
+    background: #3C5D97;
+    color: white;
+    width: 110px;
+    height: 25px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 25px 0px rgba(42, 42, 53, 0.4);
+    box-shadow: -3px -3px 10px rgba(214, 214, 223, 0.2), 3px 3px 10px rgba(41, 58, 87, 0.4);
+    /* box-shadow: 0 0 0 1px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.2), inset 0 1px 2px rgba(255,255,255,.7); */
+}
+
+.buttons button:active {
+    background: #3C5D97;
+    box-shadow: inset -3px -3px 3px rgba(214, 214, 223, 0.2), inset 0 2px 5px rgba(41, 58, 87, 0.7);
+}
+
+.solutions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px 0 10px;
+    min-height: 100vh;
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    max-width: 378px;
+    margin-bottom: 50px;
+}
+
+.item-illustration {
+    margin-bottom: 24px;
+}
+
+.item-text h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.item-text p {
+    font-size: 13px;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+
+.item-text a {
+    margin-top: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #5D64D2;
+}
+
+.imte-illustration {
+    max-width: 360px;
+}
+
+.resize img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #151B2B;
+}

@@ -1,4 +1,6 @@
 const results = document.getElementById("app-results");
+const countResults = document.getElementById("app-count-results");
+const elements = document.getElementById("app-elements");
 const buttons = document.getElementById("app-buttons").children;
 const bill = document.getElementById("app-bill");
 const payslip = document.getElementById("app-payslip");
@@ -25,17 +27,19 @@ function selected(e) {
 }
 
 function displaySelected(url) {
-    results.textContent = "";
+    elements.innerHTML = "";
     let compteur = 0;
     fetch(url)
         .then(response => response.json())
         .then(function(data) {
             let doc = data.documents;
             for (let i in doc) {
-                results.innerHTML += "<div class='row'>" + doc[i].filename + "</div>";
-                console.log(doc[i]);
+                if (compteur % 2 == 0)
+                    elements.innerHTML += "<div class='row dark'>" + doc[i].filename + "</div>";
+                else
+                    elements.innerHTML += "<div class='row normal'>" + doc[i].filename + "</div>";
                 compteur++;
             }
-            console.log(compteur)
+            countResults.textContent = compteur + " documents trouvés";
         });
 }

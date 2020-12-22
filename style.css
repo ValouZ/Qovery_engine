@@ -227,9 +227,34 @@ header p {
 }
 
 .buttons .selection {
-    font-size: 10px;
+    font-size: 11px;
     background: #4869a1;
     box-shadow: inset -3px -3px 3px rgba(214, 214, 223, 0.2), inset 0 2px 5px rgba(41, 58, 87, 0.7);
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results h3 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.elements {
+    font-size: 12px;
+}
+
+.elements .row {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 15px 25px 17px 10px;
+}
+
+.row.dark{
+    background: #314A77;
 }
 
 .solutions {
@@ -355,6 +380,17 @@ footer {
     }
     .payslip {
         margin: 0 44px;
+    }
+    .results h3 {
+        margin-top: 57px;
+        margin-bottom: 54px;
+        font-size: 27px;
+    }
+    .elements {
+        font-size: 17px;
+    }
+    .elements .row {
+        padding: 22px 50px 25px 20px;
     }
     .item-text h3 {
         font-size: 24px;

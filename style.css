@@ -226,7 +226,7 @@ header p {
     background: #4869a1;
 }
 
-.buttons button:active {
+.buttons .selection {
     font-size: 10px;
     background: #4869a1;
     box-shadow: inset -3px -3px 3px rgba(214, 214, 223, 0.2), inset 0 2px 5px rgba(41, 58, 87, 0.7);
@@ -350,7 +350,7 @@ footer {
         height: 51px;
         border-radius: 30px;
     }
-    .buttons button:active{
+    .buttons .selection {
         font-size: 14px;
     }
     .payslip {

@@ -26,8 +26,7 @@ header {
     width: 158px;
     height: 49px;
     top: 30px;
-    /* left: calc(50% - calc(158px / 2)); */
-    left: 20px;
+    left: 5%;
     align-items: center;
     color: #A8A8C1;
     font-size: 31px;
@@ -105,6 +104,10 @@ header p {
     flex-direction: column;
 }
 
+.content-text {
+    max-width: 457px;
+}
+
 .content-text h2 {
     font-weight: 400;
     font-size: 21px;
@@ -172,6 +175,7 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 837px;
 }
 
 .how-text h2 {
@@ -205,23 +209,26 @@ header p {
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
-    font-size: 12px;
 }
 
 .buttons button {
+    font-size: 12px;
     outline: none;
     background: #3C5D97;
     color: white;
     width: 110px;
     height: 25px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 25px 0px rgba(42, 42, 53, 0.4);
+    border-radius: 10px;
     box-shadow: -3px -3px 10px rgba(214, 214, 223, 0.2), 3px 3px 10px rgba(41, 58, 87, 0.4);
-    /* box-shadow: 0 0 0 1px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.2), inset 0 1px 2px rgba(255,255,255,.7); */
+}
+
+.buttons button:hover {
+    background: #4869a1;
 }
 
 .buttons button:active {
-    background: #3C5D97;
+    font-size: 10px;
+    background: #4869a1;
     box-shadow: inset -3px -3px 3px rgba(214, 214, 223, 0.2), inset 0 2px 5px rgba(41, 58, 87, 0.7);
 }
 
@@ -229,17 +236,18 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 10px 0 10px;
+    padding: 50px 10px 30px 10px;
     min-height: 100vh;
 }
 
 .group {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .item {
-    max-width: 378px;
+    max-width: 428px;
     margin-bottom: 50px;
 }
 
@@ -267,7 +275,11 @@ header p {
     color: #5D64D2;
 }
 
-.imte-illustration {
+.item-text a:hover {
+    text-decoration: underline;
+}
+
+.item-illustration {
     max-width: 360px;
 }
 
@@ -280,4 +292,128 @@ footer {
     width: 100%;
     height: 50px;
     background: #151B2B;
+}
+
+@media only screen and (min-width: 768px) {
+    .qovery-engine {
+        padding-bottom: 70px;
+    }
+    .head h1 {
+        font-size: 46px;
+        margin-right: 26px;
+    }
+    .content-text h2 {
+        font-size: 25px;
+    }
+    .content-text p {
+        font-size: 16px;
+    }
+    .links {
+        margin-top: 48px;
+    }
+    .links a {
+        display: flex;
+        align-items: center;
+        padding: 9px 16px;
+        font-size: 14px;
+    }
+    .illustration {
+        margin-top: 32px;
+    }
+    .qovery-engine .illustration {
+        max-width: 567px;
+    }
+    .how-work {
+        padding-bottom: 52px;
+    }
+    .how-text h2 {
+        font-size: 32px;
+    }
+    .how-text p {
+        font-size: 16px;
+    }
+    .how-work .illustration {
+        max-width: 853px;
+    }
+    .askOlga {
+        min-height: 100vh;
+    }
+    .askOlga h2 {
+        font-size: 32px;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .buttons button {
+        font-size: 17px;
+        width: 250px;
+        height: 51px;
+        border-radius: 30px;
+    }
+    .buttons button:active{
+        font-size: 14px;
+    }
+    .payslip {
+        margin: 0 44px;
+    }
+    .item-text h3 {
+        font-size: 24px;
+    }
+    .item-text p {
+        font-size: 16px;
+    }
+    .item-illustration {
+        max-width: unset;
+    }
+    .resize {
+        width: 422px;
+    }
+    footer {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .solutions {
+        padding-bottom: 400px;
+    }
+    .item {
+        margin-bottom: 0;
+    }
+    .group {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-around;
+        margin-bottom: 65px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        left: 151px;
+        top: 41px;
+    }
+    .qovery-engine {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-between;
+        min-height: 100vh;
+        background: #151B2B;
+        color: white;
+        padding: 80px 165px 159px 151px;
+    }
+    .info {
+        margin-top: calc(210px - 80px);
+    }
+    .links {
+        justify-content: flex-start;
+    }
+    .qovery-engine .illustration {
+        margin-top: 0;
+        max-width: unset;
+        width: 567px;
+        height: 687px;
+    }
 }

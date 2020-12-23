@@ -296,10 +296,21 @@ header p {
 .elements .row {
     border-bottom: 1px solid #CCCCCC;
     padding: 15px 25px 17px 10px;
+    transition: 1s cubic-bezier(0,0,.38,1);
 }
 
 .row.dark {
     background: #314A77;
+}
+
+.left-row {
+    opacity: 0;
+    transform: translateX(-500px);
+}
+
+.right-row {
+    opacity: 0;
+    transform: translateX(500px);
 }
 
 .solutions {

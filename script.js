@@ -5,6 +5,7 @@ const buttons = document.getElementById("app-buttons").children;
 const bill = document.getElementById("app-bill");
 const payslip = document.getElementById("app-payslip");
 const fees = document.getElementById("app-fees");
+let indexRow = 0;
 
 // Elements used to make elements appears
 let y;
@@ -74,14 +75,32 @@ function displaySelected(url) {
         .then(function(data) {
             let doc = data.documents;
             for (let i in doc) {
-                if (compteur % 2 == 0)
-                    elements.innerHTML += "<div class='row dark'>" + doc[i].filename + "</div>";
-                else
-                    elements.innerHTML += "<div class='row normal'>" + doc[i].filename + "</div>";
+                if (compteur % 2 == 0) {
+                    elements.innerHTML += "<div class='left-row row dark'>" + doc[i].filename + "</div>";
+                } else {
+                    elements.innerHTML += "<div class='right-row row normal'>" + doc[i].filename + "</div>";
+                }
                 compteur++;
             }
-            countResults.textContent = compteur + " documents trouvés";
+            indexRow = 0;
+            let interval = setInterval(() => { displayRow(interval) }, 100);
+
+            if (compteur < 2)
+                countResults.textContent = compteur + " document trouvé";
+            else
+                countResults.textContent = compteur + " documents trouvés";
         });
+}
+
+function displayRow(interval) {
+    if (indexRow == elements.children.length - 1) {
+        clearInterval(interval);
+    }
+    if (indexRow % 2 == 0)
+        elements.children[indexRow].classList.remove("left-row");
+    else
+        elements.children[indexRow].classList.remove("right-row");
+    indexRow++;
 }
 
 // Function used to dislay on scroll the content

@@ -6,11 +6,53 @@ const bill = document.getElementById("app-bill");
 const payslip = document.getElementById("app-payslip");
 const fees = document.getElementById("app-fees");
 
+// Elements used to make elements appears
+let y;
+const header = document.getElementById("app-logo");
+const qoveryIllustration = document.getElementById("app-qovery-illustration");
+const howText = document.getElementsByClassName("how-text")[0];
+const howIllustration = document.getElementById("app-how-illustration");
+const groups = document.getElementsByClassName("group");
 
+// Array of the content we want to hide before the scroll
+let arrayElementsToDisplay = [howText, howIllustration, groups];
+
+// --------------------EVENT LISTENER--------------------
+
+// Eventlistener to display the content of the selected API
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", selected);
 }
+// Eventlistener to display on scroll the content (only desktop)
+if (document.documentElement.clientWidth >= 1440) {
+    // console.log("Page is more than 1440px");
 
+    // Add the class hide to the content we want to hide in the arrayElementsToDisplay ARRAY
+    for (let i = 0; i < arrayElementsToDisplay.length; i++) {
+
+        // if the length is not udnefined, then this is an array
+        if (arrayElementsToDisplay[i].length != undefined) {
+
+            for (let j = 0; j < arrayElementsToDisplay[i].length; j++) {
+                // We add the class on the item that are the children of the group div
+                arrayElementsToDisplay[i][j].children[0].classList.add("translateLeft");
+                arrayElementsToDisplay[i][j].children[1].classList.add("translateRight");
+            }
+
+        } else {
+            arrayElementsToDisplay[i].classList.add("hide");
+        }
+    }
+    window.addEventListener("scroll", displayOnScroll);
+}
+
+displayHero();
+
+
+
+// --------------------FUNCTIONS--------------------
+
+// Set a class to the clicked button to sho it and call the right API.
 function selected(e) {
     e.preventDefault();
     for (let j = 0; j < buttons.length; j++) {
@@ -26,6 +68,7 @@ function selected(e) {
     }
 }
 
+// Function displaying the content of the called url
 function displaySelected(url) {
     elements.innerHTML = "";
     let compteur = 0;
@@ -42,4 +85,44 @@ function displaySelected(url) {
             }
             countResults.textContent = compteur + " documents trouvés";
         });
+}
+
+
+
+// Function displaying the content of the HERO with animation
+function displayHero() {
+    qoveryIllustration.classList.remove("hideIllustration");
+}
+
+
+
+// Function used to dislay on scroll the content
+function displayOnScroll() {
+    y = this.pageYOffset;
+    // console.log(y);
+
+    // Display the title "How does it work" and the text with it
+    if (y >= 200) {
+        howText.classList.remove("hide");
+    }
+
+    // Display the illustration of the section "How does it work"
+    if (y >= 400) {
+        howIllustration.classList.remove("hide");
+    }
+
+    // Display the first group of the solutions div 
+    if (y >= 1850) {
+
+        // groups[0].classList.remove("translateLeft");
+        groups[0].children[0].classList.remove("translateLeft");
+        groups[0].children[1].classList.remove("translateRight");
+    }
+
+    // Display the second group of the solutions div 
+    if (y >= 2400) {
+        // groups[1].classList.remove("translateLeft");
+        groups[1].children[0].classList.remove("translateLeft");
+        groups[1].children[1].classList.remove("translateRight");
+    }
 }

@@ -46,9 +46,6 @@ if (document.documentElement.clientWidth >= 1440) {
     window.addEventListener("scroll", displayOnScroll);
 }
 
-displayHero();
-
-
 
 // --------------------FUNCTIONS--------------------
 
@@ -86,15 +83,6 @@ function displaySelected(url) {
             countResults.textContent = compteur + " documents trouvés";
         });
 }
-
-
-
-// Function displaying the content of the HERO with animation
-function displayHero() {
-    qoveryIllustration.classList.remove("hideIllustration");
-}
-
-
 
 // Function used to dislay on scroll the content
 function displayOnScroll() {

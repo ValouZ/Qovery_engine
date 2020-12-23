@@ -207,7 +207,7 @@ header p {
 .buttons {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -220,10 +220,15 @@ header p {
     height: 25px;
     border-radius: 10px;
     box-shadow: -3px -3px 10px rgba(214, 214, 223, 0.2), 3px 3px 10px rgba(41, 58, 87, 0.4);
+    margin-bottom: 25px;
 }
 
 .buttons button:hover {
     background: #4869a1;
+}
+
+.payslip {
+    margin: 0 10px;
 }
 
 .buttons .selection {
@@ -239,7 +244,7 @@ header p {
 }
 
 .results h3 {
-    margin-top: 30px;
+    margin-top: 5px;
     margin-bottom: 25px;
     font-size: 22px;
 }
@@ -371,15 +376,16 @@ footer {
     }
     .buttons button {
         font-size: 17px;
-        width: 250px;
-        height: 51px;
-        border-radius: 30px;
+        width: 200px;
+        height: 35px;
+        border-radius: 20px;
+        margin-bottom: 0px;
     }
     .buttons .selection {
         font-size: 14px;
     }
     .payslip {
-        margin: 0 44px;
+        margin: 0 20px;
     }
     .results h3 {
         margin-top: 57px;
@@ -410,6 +416,14 @@ footer {
 }
 
 @media screen and (min-width: 1000px) {
+    .buttons button {
+        width: 250px;
+        height: 51px;
+        border-radius: 30px;
+    }
+    .payslip {
+        margin: 0 44px;
+    }
     .solutions {
         padding-bottom: 400px;
     }

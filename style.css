@@ -20,6 +20,15 @@ h3 {
     font-family: "HK Grotesk";
 }
 
+:root{
+    --transition-appear: 0.5s linear;
+}
+
+.hide{
+    opacity: 0;
+    transition: var(--transition-appear);
+}
+
 header {
     position: absolute;
     display: flex;
@@ -176,6 +185,8 @@ header p {
     flex-direction: column;
     align-items: center;
     max-width: 837px;
+    /* opacity: 0; */
+    transition: var(--transition-appear);
 }
 
 .how-text h2 {
@@ -187,6 +198,11 @@ header p {
 .how-text p {
     font-size: 13px;
     text-align: center;
+}
+
+.how-work .illustration{
+    /* opacity: 0; */
+    transition: var(--transition-appear);
 }
 
 .askOlga {
@@ -212,6 +228,8 @@ header p {
 }
 
 .buttons button {
+    /* opacity: 0; */
+    /* transition: var(--transition-appear); */
     font-size: 12px;
     outline: none;
     background: #3C5D97;
@@ -271,6 +289,8 @@ header p {
 }
 
 .group {
+    /* opacity: 0; */
+    transition: var(--transition-appear);
     display: flex;
     flex-direction: column;
     align-items: center;

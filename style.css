@@ -20,13 +20,25 @@ h3 {
     font-family: "HK Grotesk";
 }
 
-:root{
-    --transition-appear: 0.5s linear;
+:root {
+    --transition-appear: 0.7s linear;
+    --transition-moove: 2s cubic-bezier(.27, .63, .34, .98);
 }
 
-.hide{
+.hide {
     opacity: 0;
-    transition: var(--transition-appear);
+}
+
+.translateLeft {
+    opacity: 0;
+    transform: translateX(-500px);
+    /* transform: translateX(500px); */
+}
+
+.translateRight {
+    opacity: 0;
+    transform: translateX(500px);
+    /* transform: translateX(-500px); */
 }
 
 header {
@@ -42,6 +54,10 @@ header {
     font-weight: bold;
     justify-content: space-between;
 }
+
+/* .hideHeader {
+    opacity: 0;
+} */
 
 header p {
     font-family: "HK Grotesk";
@@ -171,6 +187,15 @@ header p {
     height: 100%;
 }
 
+.qovery-engine .illustration {
+    transition: 1s cubic-bezier(.55, .22, .87, .56);
+}
+
+.hideIllustration {
+    opacity: 0;
+    transform: scale(0) translateX(-700px);
+}
+
 .how-work {
     display: flex;
     flex-direction: column;
@@ -200,8 +225,7 @@ header p {
     text-align: center;
 }
 
-.how-work .illustration{
-    /* opacity: 0; */
+.how-work .illustration {
     transition: var(--transition-appear);
 }
 
@@ -281,6 +305,7 @@ header p {
 }
 
 .solutions {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,13 +315,14 @@ header p {
 
 .group {
     /* opacity: 0; */
-    transition: var(--transition-appear);
+    /* transition: var(--transition-appear); */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .item {
+    transition: var(--transition-moove);
     max-width: 428px;
     margin-bottom: 50px;
 }
@@ -465,6 +491,9 @@ footer {
         left: 151px;
         top: 41px;
     }
+    /* .animateLogo {
+        animation: 2s moveLogo linear;
+    } */
     .qovery-engine {
         flex-direction: row;
         align-items: unset;
@@ -485,5 +514,18 @@ footer {
         max-width: unset;
         width: 567px;
         height: 687px;
+    }
+}
+
+@keyframes moveLogo {
+    0% {
+        opacity: 0;
+        transform: translate(1000px, 500px);
+    }
+    50%{
+        transform: translate(800px, 500px);
+    }
+    100% {
+        opacity: 1;
     }
 }

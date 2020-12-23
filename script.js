@@ -8,6 +8,8 @@ const fees = document.getElementById("app-fees");
 
 // Elements used to make elements appears
 let y;
+const header = document.getElementById("app-logo");
+const qoveryIllustration = document.getElementById("app-qovery-illustration");
 const howText = document.getElementsByClassName("how-text")[0];
 const howIllustration = document.getElementById("app-how-illustration");
 const groups = document.getElementsByClassName("group");
@@ -32,16 +34,19 @@ if (document.documentElement.clientWidth >= 1440) {
         if (arrayElementsToDisplay[i].length != undefined) {
 
             for (let j = 0; j < arrayElementsToDisplay[i].length; j++) {
-                arrayElementsToDisplay[i][j].classList.add("hide");
+                // We add the class on the item that are the children of the group div
+                arrayElementsToDisplay[i][j].children[0].classList.add("translateLeft");
+                arrayElementsToDisplay[i][j].children[1].classList.add("translateRight");
             }
 
         } else {
             arrayElementsToDisplay[i].classList.add("hide");
         }
     }
-
     window.addEventListener("scroll", displayOnScroll);
 }
+
+displayHero();
 
 
 
@@ -82,6 +87,15 @@ function displaySelected(url) {
         });
 }
 
+
+
+// Function displaying the content of the HERO with animation
+function displayHero() {
+    qoveryIllustration.classList.remove("hideIllustration");
+}
+
+
+
 // Function used to dislay on scroll the content
 function displayOnScroll() {
     y = this.pageYOffset;
@@ -99,11 +113,16 @@ function displayOnScroll() {
 
     // Display the first group of the solutions div 
     if (y >= 1850) {
-        groups[0].classList.remove("hide");
+
+        // groups[0].classList.remove("translateLeft");
+        groups[0].children[0].classList.remove("translateLeft");
+        groups[0].children[1].classList.remove("translateRight");
     }
 
     // Display the second group of the solutions div 
     if (y >= 2400) {
-        groups[1].classList.remove("hide");
+        // groups[1].classList.remove("translateLeft");
+        groups[1].children[0].classList.remove("translateLeft");
+        groups[1].children[1].classList.remove("translateRight");
     }
 }

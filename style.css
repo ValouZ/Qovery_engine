@@ -55,6 +55,7 @@ header {
     justify-content: space-between;
 }
 
+
 /* .hideHeader {
     opacity: 0;
 } */
@@ -118,7 +119,7 @@ header p {
     padding-right: 2px;
 }
 
-.git-likes { 
+.git-likes {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,7 +520,7 @@ footer {
         opacity: 0;
         transform: translate(1000px, 500px);
     }
-    50%{
+    50% {
         transform: translate(800px, 500px);
     }
     100% {

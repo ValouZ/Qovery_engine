@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "SF UI Text", sans-serif;
+    font-family: "SF UI Text Regular", sans-serif;
 }
 
 button {
@@ -17,7 +17,7 @@ a {
 h1,
 h2,
 h3 {
-    font-family: "HK Grotesk";
+    font-family: "HK Grotesk Bold";
 }
 
 :root {

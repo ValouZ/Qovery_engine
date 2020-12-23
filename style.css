@@ -16,7 +16,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+header p {
     font-family: "HK Grotesk Bold";
 }
 
@@ -55,15 +56,6 @@ header {
     justify-content: space-between;
 }
 
-
-/* .hideHeader {
-    opacity: 0;
-} */
-
-header p {
-    font-family: "HK Grotesk";
-}
-
 .qovery-engine {
     display: flex;
     flex-direction: column;
@@ -89,7 +81,7 @@ header p {
 
 .head h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     margin-right: 1%;
 }
 
@@ -296,7 +288,7 @@ header p {
 .elements .row {
     border-bottom: 1px solid #CCCCCC;
     padding: 15px 25px 17px 10px;
-    transition: 1s cubic-bezier(0,0,.38,1);
+    transition: 1s cubic-bezier(0, 0, .38, 1);
 }
 
 .row.dark {

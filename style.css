@@ -225,7 +225,7 @@ header {
     align-items: center;
     background: #3C5D97;
     color: white;
-    min-height: 80vh;
+    min-height: 100vh;
     padding: 50px 10px 0 10px;
 }
 
@@ -411,9 +411,6 @@ footer {
     }
     .how-work .illustration {
         max-width: 853px;
-    }
-    .askOlga {
-        min-height: 100vh;
     }
     .askOlga h2 {
         font-size: 32px;

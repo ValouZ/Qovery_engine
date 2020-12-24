@@ -299,14 +299,14 @@ header {
 
 .left-row {
     opacity: 0;
-    /* transform: translateX(-500px); */
-    transform: translate(-400px, -200px) ;
+    transform: translateX(-500px);
+    /* transform: translate(-400px, -200px) ; */
 }
 
 .right-row {
     opacity: 0;
-    transform: translate(400px, -200px);
-    /* transform: translateX(500px); */
+    /* transform: translate(400px, -200px); */
+    transform: translateX(500px);
 }
 
 .solutions {

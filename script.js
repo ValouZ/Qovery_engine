@@ -83,7 +83,7 @@ function displaySelected(url) {
                 compteur++;
             }
             indexRow = 0;
-            let interval = setInterval(() => { displayRow(interval) }, 100);
+            let interval = setInterval(() => { displayRow(interval) }, 50);
 
             if (compteur < 2)
                 countResults.textContent = compteur + " document trouvé";

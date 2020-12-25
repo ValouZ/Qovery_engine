@@ -227,6 +227,7 @@ header {
     color: white;
     min-height: 100vh;
     padding: 50px 10px 0 10px;
+    overflow: hidden;
 }
 
 .askOlga h2 {

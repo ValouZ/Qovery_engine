@@ -72,7 +72,7 @@ function setSelectionClass(myButton){
 
 // Function displaying the content of the called url
 function displaySelected(url, myButton) {
-    // If the intervalStatut, it means that an interval is running and
+    // If the intervalStatut is true, it means that an interval is running and
     // we should not launch an other one yet
     if (!intervalStatut) {
         setSelectionClass(myButton);

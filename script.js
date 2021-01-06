@@ -63,7 +63,7 @@ function selected(e) {
     }
 }
 
-function setSelectionClass(myButton){
+function setSelectionClass(myButton) {
     for (let j = 0; j < buttons.length; j++) {
         buttons[j].classList.remove("selection");
     }
@@ -84,10 +84,11 @@ function displaySelected(url, myButton) {
             .then(function(data) {
                 let doc = data.documents;
                 for (let i in doc) {
+                    let filename = doc[i].filename;
                     if (compteur % 2 == 0) {
-                        elements.innerHTML += "<div class='left-row row dark'>" + doc[i].filename + "</div>";
+                        elements.innerHTML += "<div class='left-row row dark'>" + filename + "</div>";
                     } else {
-                        elements.innerHTML += "<div class='right-row row normal'>" + doc[i].filename + "</div>";
+                        elements.innerHTML += "<div class='right-row row normal'>" + filename + "</div>";
                     }
                     compteur++;
                 }
